@@ -1,22 +1,12 @@
 {
-  "name": "sacaloya",
+  "name": "arajet-flight-checker",
   "version": "1.0.0",
-  "description": "",
-  "main": "arajet-checker.js",
+  "description": "Script para monitorear vuelos de Arajet y enviar alertas a Telegram",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leoporc/SacaloYaBot.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/leoporc/SacaloYaBot/issues"
-  },
-  "homepage": "https://github.com/leoporc/SacaloYaBot#readme",
   "dependencies": {
     "node-fetch": "^3.3.2"
   }
