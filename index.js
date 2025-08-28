@@ -1,10 +1,12 @@
 // 🚀 Dependencias (instalá con: npm install node-fetch)
 import fetch from "node-fetch";
+import express from "express";
 
 // ---------------- CONFIG ----------------
 const API_URL = "https://arajet-api.ezycommerce.sabre.com/api/v1/Availability/SearchLowestFare";
 
-const port = process.env.PORT || 4000 
+const app = express();
+const port = process.env.PORT || 4000;
 
 const OUTBOUND_DATES = [
   "2026-06-12T00:00:00",
@@ -171,8 +173,18 @@ async function buscarVuelos() {
   }
 }
 
-// ---------------- Loop automático ----------------
-buscarVuelos(); // primera vez
-
-// cada 5 min
-setInterval(buscarVuelos, 5 * 60 * 1000);
+/* ---------------- Express ---------------- */
+app.get("/", (req, res) => {
+    res.send("🚀 Flight checker corriendo en Render!");
+  });
+  
+  app.get("/health", (req, res) => {
+    res.send("✅ OK");
+  });
+  
+  app.listen(port, () => {
+    console.log(`Servidor corriendo en puerto ${port}`);
+    // arranca la búsqueda cada 5 minutos
+    buscarVuelos();
+    setInterval(buscarVuelos, 5 * 60 * 1000);
+  });
