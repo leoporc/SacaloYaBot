@@ -67,8 +67,8 @@ const numberVal = x => (typeof x === "number" ? x : parseFloat(String(x).replace
 
 // ---------------- Telegram ----------------
 async function sendToTelegram(texto) {
-  const BOT_TOKEN = "7442373954:AAF5JzQnU6UgqajYZMg2Fxr1gNQvWx4T1yw";
-  const CHAT_ID = "1065523948"; // puede ser user ID o canal
+  const BOT_TOKEN = process.env.BOT_TOKEN;
+  const CHAT_ID = process.env.CHAT_ID;
   const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
   const body = {
