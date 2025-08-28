@@ -7,7 +7,6 @@ const API_URL = "https://arajet-api.ezycommerce.sabre.com/api/v1/Availability/Se
 const port = process.env.PORT || 4000 
 
 const OUTBOUND_DATES = [
-  "2026-06-03T00:00:00",
   "2026-06-12T00:00:00",
   "2026-06-15T00:00:00",
   "2026-06-17T00:00:00",
