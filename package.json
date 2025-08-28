@@ -1,0 +1,23 @@
+{
+  "name": "sacaloya",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arajet-checker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoporc/SacaloYaBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leoporc/SacaloYaBot/issues"
+  },
+  "homepage": "https://github.com/leoporc/SacaloYaBot#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
