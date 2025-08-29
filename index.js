@@ -168,7 +168,9 @@ async function buscarVuelos() {
     } else {
       console.log(`⚠️ No hay combinaciones ida+vuelta con total < ${PRICE_THRESHOLD}.`);
     }
-    await fetch(`https://sacaloyabot-1.onrender.com/health`, {});
+    await fetch(`https://sacaloyabot-1.onrender.com/health`, {
+      method: "GET",
+    });
   } catch (err) {
     console.error("❌ Error en consulta:", err);
   }
