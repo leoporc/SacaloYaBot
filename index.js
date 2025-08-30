@@ -187,7 +187,7 @@ app.get("/", (req, res) => {
   
   app.listen(port, () => {
     console.log(`Servidor corriendo en puerto ${port}`);
-    // arranca la búsqueda cada 5 minutos
+    // arranca la búsqueda cada 15 minutos
     buscarVuelos();
-    setInterval(buscarVuelos, 5 * 60 * 1000);
+    setInterval(buscarVuelos, 15 * 60 * 1000);
   });
